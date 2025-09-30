@@ -1,0 +1,128 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e9e3d3;
+  font-family: 'Syne',sans-serif;
+  color: #111;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  width: 60%;
+}
+
+.intro p {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.emoji {
+  display: inline-block;
+  animation: wave 1.5s ease-in-out;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(15deg); }
+  30% { transform: rotate(-10deg); }
+  45% { transform: rotate(15deg); }
+  60% { transform: rotate(-5deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.intro h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.circle {
+  background: #000;
+  color: #fff;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.circle:hover {
+  transform: scale(1.05) rotate(-3deg);
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  font-size: 1.8rem;
+  letter-spacing: -1px;
+  color: #111;
+}
+
+/* LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #ff3b30;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff3b30;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
