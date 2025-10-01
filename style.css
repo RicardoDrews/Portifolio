@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
@@ -86,14 +89,12 @@ body {
   z-index: 1000;
 }
 
-/* LOGO */
 .logo {
   font-size: 1.8rem;
   letter-spacing: -1px;
   color: #111;
 }
 
-/* LINKS */
 .nav-links {
   list-style: none;
   display: flex;
@@ -115,14 +116,15 @@ body {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background: #ff3b30;
+  background: #181280;
   transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #ff3b30;
+  color: #181280;
 }
 
 .nav-links a:hover::after {
   width: 100%;
 }
+
