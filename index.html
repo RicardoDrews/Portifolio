@@ -4,52 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ricardo Drews - Portfólio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
 </head>
+<body>
 <nav class="navbar">
     <div class="logo">DREWS</div>
     <ul class="nav-links">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#contato">Contato</a></li>
+        <button class="theme-toggle-button">🌑</button>
     </ul>
 </nav>
 
     <main class="hero">
         <div class="intro">
             <p>Olá <span class="emoji">👋</span>, eu sou</p>
-            <h1>
+            <h1 id="headline">
                 <span>RICARDO</span> <br>
                 <span>DREWS</span>
             </h1>
         </div>
         <div class="circle">
-            <p>FOTO</p>
         </div>
+        <div class="scroll-down-indicator"></div>
     </main>
 
     <section id="sobre" class="page-section">
-        <h2>Sobre Mim</h2>
-        <p>Sou um estudante de ciência da computação no segundo semestre apaixonado por tecnologia, estou sempre buscando aprender e crescer na área de desenvolvimento.</p>
-    </section>
-
+    <div class="sobre-container">
+        <div class="sobre-texto">
+            <h2>Sobre Mim</h2>
+            <p>
+                Sou um desenvolvedor apaixonado por tecnologia e por criar soluções que impactam positivamente a vida das pessoas. 
+                Tenho experiência com HTML, CSS e JavaScript, e estou sempre buscando aprender novas ferramentas para aprimorar minhas habilidades.
+            </p>
+        </div>
+    </div>
+</section>
+<section id="habilidades" class="page-section">
+    <div class="section-content">
+        <h2>Minhas Habilidades</h2>
+        <div class="habilidades-grid">
+            <div class="habilidade-item hidden" title="HTML5"><i class="devicon-html5-plain-wordmark"></i></div>
+            <div class="habilidade-item hidden" title="CSS3"><i class="devicon-css3-plain-wordmark"></i></div>
+            <div class="habilidade-item hidden" title="JavaScript"><i class="devicon-javascript-plain"></i></div>
+            <div class="habilidade-item hidden" title="Python"><i class="devicon-python-plain-wordmark"></i></div>
+            <div class="habilidade-item hidden" title="Java"><i class="devicon-java-plain-wordmark"></i></div>
+            <div class="habilidade-item hidden" title="Git"><i class="devicon-git-plain-wordmark"></i></div>
+        </div>
+    </div>
+</section>
  <section id="projetos" class="page-section">
     <div class="section-content">
         <h2>Meus Projetos</h2>
         
-        <div class="projetos-grid">
+        <div class="projetos-grid hidden">
             
-            <div class="projeto-card">
+            <div class="projeto-card hidden">
                 <h3>Sistema de Biblioteca</h3>
                 <p>Aplicação acadêmica desenvolvida em Java para gerenciamento de empréstimos de livros, permitindo controle de acervo, cadastro de usuários e organização eficiente das operações da biblioteca.</p>
+                <div class="biblioteca">
+                    <i class="devicon-java-plain" tittle="Java"></i>
+                </div>
+                
                 <a href="#" class="projeto-link">Ver Projeto</a>
             </div>
-            
-            <div class="projeto-card">
+
+            <div class="projeto-card hidden">
                 <h3>Sky Battle</h3>
                 <p>Jogo simples desenvolvido em Python, com mecânica de combate aéreo em 2D. O projeto explora movimentação de sprites, colisões, disparos e pontuação, proporcionando uma experiência interativa e dinâmica.</p>
+                <div class="skybattle">
+                    <i class="devicon-python-plain" tittle="Python"></i>
+                </div>
                 <a href="#" class="projeto-link">Ver Projeto</a>
             </div>
         
@@ -61,7 +90,7 @@
     </section>
 
 <section id="contato" class="page-section">
-    <div class="contact-container">
+    <div class="contact-container hidden">
 
 
         <div class="contact-box-divided">
