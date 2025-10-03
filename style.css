@@ -1,7 +1,3 @@
-/* ======================================================= */
-/* VERSÃO FINAL E CORRIGIDA - STYLE.CSS                    */
-/* ======================================================= */
-
 html {
     scroll-behavior: smooth;
 }
@@ -14,13 +10,13 @@ html {
 
 body {
     background: #e9e3d3;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Syne', sans-serif;    
     color: #111;
 }
 
-/* --- BARRA DE NAVEGAÇÃO (NAVBAR) - CORREÇÃO DEFINITIVA --- */
+/* NAVBAR */
 .navbar {
-    position: fixed; /* 1. Fica fixa na tela */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
@@ -30,9 +26,9 @@ body {
     align-items: center;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
-    z-index: 1000; /* 2. Garante que ela fique na camada mais alta */
-    background-color: #e9e3d3; /* 3. TEM um fundo sólido para não ser transparente */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 4. Sombra para destacar do conteúdo */
+    z-index: 1000; 
+    background-color: #e9e3d3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .logo {
@@ -74,7 +70,6 @@ body {
   width: 100%;
 }
 
-/* --- SEÇÃO DE APRESENTAÇÃO (HERO) --- */
 .hero {
     display: flex;
     justify-content: center;
@@ -129,7 +124,6 @@ body {
 }
 
 
-/* --- ESTILO BASE PARA AS SEÇÕES (SOBRE, PROJETOS, CONTATO) --- */
 .page-section {
     width: 100%;
     min-height: 100vh;
@@ -157,33 +151,80 @@ body {
 }
 
 
-/* --- SEÇÃO DE PROJETOS --- */
+/* PROJETOS */
 #projetos {
-    background-color: #dce1e3;
+    background-color: #e9e3d3; 
+}
+
+.section-content {
+    max-width: 1200px;
+    width: 90%;
+    text-align: center;
 }
 
 .projetos-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    width: 100%;
-    max-width: 1200px;
+    margin-top: 3rem;
 }
 
 .projeto-card {
-    background: #fff;
+    background: #e9e3d3; 
+    border: 2px solid #111;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-10px);
 }
 
 .projeto-card h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
+    color: #111; 
 }
 
+.projeto-card p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
 
-/* --- SEÇÃO DE CONTATO --- */
+.projeto-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: #111;
+    position: relative;
+    transition: color 0.3s ease;
+    padding-bottom: 5px;
+}
+
+.projeto-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #181280;
+  transition: width 0.3s ease;
+}
+
+.projeto-link:hover {
+  color: #181280;
+}
+
+.projeto-link:hover::after {
+  width: 100%;
+}
+
+/* CONTATO */
 .contact-container {
     position: relative;
     width: 100%;
@@ -192,16 +233,12 @@ body {
     align-items: center;
 }
 
-.contact-overlay-text {
-    position: absolute;
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(3rem, 10vw, 9rem);
-    font-weight: 800;
-    line-height: 1;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.05);
-    z-index: 0;
-    text-align: center;
+.contact-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-box-divided {
@@ -252,15 +289,17 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 1.5rem;
-    text-align: left;
+    text-align: center;
     color: #111;
 }
 
-.contact-links {
+.contact-links li {
   list-style: none;
-  display: flex;
+  display: block;
   gap: 2rem;
+  margin-bottom: 1rem;
 }
+
 
 .contact-links a {
   text-decoration: none;
