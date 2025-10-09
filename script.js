@@ -39,6 +39,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
+
 const themeToggleButton = document.querySelector('.theme-toggle-button');
 themeToggleButton.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');   
